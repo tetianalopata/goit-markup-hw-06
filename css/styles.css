@@ -13,6 +13,7 @@
     --pressed-state: #404BBF;
     --light: #F4F4FD;
     --success: #31D0AA;
+        --input-border: rgba(33, 33, 33, 0.2);
 
     --vertical-card-set-gap: 24px;
 
@@ -280,7 +281,7 @@ header {
     max-width: 408px;
     width: 100%;
     min-height: 576px;
-    padding: 24px 24px;
+    padding: 76px 24px 20px 24px;
 
     background-color: var(--modal-background);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -317,6 +318,117 @@ header {
     color: var(--primary-white);
     background-color: var(--pressed-state);
     border-color: var(--pressed-state);
+}
+
+.modal-heading {
+    margin-bottom: 16px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: var(--primary-dark);
+}
+
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 8px;
+}
+
+.form-comment {
+    margin-bottom: 16px;
+}
+
+.form-comment-area,
+.form-input {
+    max-width: 360px;
+    padding: 8px 38px;
+    
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-comment-area {
+    resize: none;
+    height: 120px;
+
+    padding: 8px 16px;
+}
+
+.form-input:focus,
+.form-comment-area:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.form-field .icon {
+    position: absolute;
+    top: 26px;
+    left: 16px;
+}
+
+.form-field .person {
+    top: 29px;
+}
+
+.form-field:focus-within .icon{
+    fill: var(--accent-color);
+}
+
+.form-label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: calc(16 /12);
+    letter-spacing: 0.04em;
+    color: var(--icon-main);
+}
+
+.checkbox {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+
+    border: 1.25px solid var(--primary-dark);
+    border-radius: 2px;
+}
+
+.legal-agreement {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+
+    margin-bottom: 24px;
+}
+
+.policy-link {
+    color: var(--accent-color);
+}
+
+.modal-send {
+    display: block;
+    width: 169px;
+    margin: auto;
+    padding: 16px 32px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.04em;
+    color: var(--primary-white);
+    text-align: center;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--main-transition-dur-and-func);
+}
+
+.modal-send:hover,
+.modal-send:focus {
+    background-color: var(--pressed-state);
 }
 
 /* advantages */
