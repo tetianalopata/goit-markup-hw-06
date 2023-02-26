@@ -332,7 +332,7 @@
                             <svg class="icon" width="24" height="24">
                                 <use href="./images/all-icons.svg#icon-instagram"></use>
                             </svg>
-                        </a> 
+                        </a>
                     </li>
                     <li class="item">
                         <a href="/" class="link">
@@ -359,18 +359,16 @@
             </div>
             <div class="newsletter">
                 <p class="footer-heading">Subscribe</p>
-                <div class="form">
-                    <form>
-                        <label for="footer-input" class="visually-hidden">Subscribe</label>
-                        <input class="footer-input" type="email" name="email" placeholder="E-mail" id="footer-input">
-                    </form>
+                <form class="form">
+                    <label for="footer-input" class="visually-hidden">Subscribe</label>
+                    <input class="footer-input" type="email" name="email" placeholder="E-mail" id="footer-input">
                     <button class="subscribe-button" type="submit">
                         Subscribe
                         <svg width="24" height="24">
                             <use href="./images/all-icons.svg#telegram"></use>
                         </svg>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </footer>
@@ -387,26 +385,33 @@
                
                 <label class="form-field">
                     <span class="label-text">Name</span>
-                    <input class="form-input" type="text" name="name">
-                    <svg class="icon person" width="18" height="18">
-                        <use href="./images/all-icons.svg#person"></use>
-                    </svg>
+                    <span class="input-with-icon">
+                        <input class="form-input" type="text" name="name">
+                        <svg class="icon" width="18" height="18">
+                            <use href="./images/all-icons.svg#person"></use>
+                        </svg>
+                    </span>
                 </label>
             
                 <label class="form-field">
                     <span class="label-text">Phone</span>
-                    <input class="form-input" type="tel" name="phone">
-                    <svg class="icon" width="18" height="24">
-                        <use href="./images/all-icons.svg#phone"></use>
-                    </svg>
+                    <span class="input-with-icon">
+                        <input class="form-input" type="tel" name="phone">
+                        <svg class="icon" width="18" height="24">
+                            <use href="./images/all-icons.svg#phone"></use>
+                        </svg>
+                    </span>
                 </label>
               
                 <label class="form-field">
                     <span class="label-text">Email</span>
-                    <input class="form-input" type="email" name="email" >
-                    <svg class="icon" width="18" height="24">
-                        <use href="./images/all-icons.svg#envelope"></use>
-                    </svg>
+                    <span class="input-with-icon">
+                        <input class="form-input" type="email" name="email">
+                        <svg class="icon" width="18" height="24">
+                            <use href="./images/all-icons.svg#envelope"></use>
+                        </svg>
+                    </span>
+                    
                 </label>
         
                 <label class="form-comment form-field">
@@ -417,7 +422,7 @@
                 <label class="legal-agreement form-field">
                     <input class="visually-hidden checkbox" type="checkbox" name="legal-agreement" value="accepted">
                     <span class="checkbox-icon">
-                        <svg width="16" height="16">
+                        <svg width="10" height="8">
                             <use href="./images/all-icons.svg#checked"></use>
                         </svg>
                     </span>

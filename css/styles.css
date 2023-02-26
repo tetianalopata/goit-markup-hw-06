@@ -334,10 +334,10 @@ header {
 }
 
 .form-field {
-    position: relative;
     display: flex;
     flex-direction: column;
-  
+    width: 100%;
+
     margin-bottom: 8px;
 }
 
@@ -357,6 +357,7 @@ header {
 .form-comment-area,
 .form-input {
     max-width: 360px;
+    width: 100%;
     height: 40px;
     padding: 8px 38px;
     
@@ -386,16 +387,18 @@ header {
     border: 1px solid var(--accent-color);
 }
 
-.form-field .icon {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
+.input-with-icon {
+    position: relative;
 
-    transition: fill var(--main-transition-dur-and-func);
 }
 
-.form-field .person {
-    bottom: 11px;
+.form-field .icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    transform: translateY(-50%);
+    transition: fill var(--main-transition-dur-and-func);
 }
 
 .form-field:focus-within .icon{
@@ -405,7 +408,6 @@ header {
 /* ==================Checkbox states=================*/
 
 .checkbox-icon {
-    position: absolute;
     width: 16px;
     height: 16px;
     display: flex;
@@ -416,26 +418,43 @@ header {
     border-radius: 2px;
 
     background-color: var(--primary-white);
+    fill: transparent;
     transition: border var(--main-transition-dur-and-func),
+    fill var(--main-transition-dur-and-func),
     background var(--main-transition-dur-and-func);
 }
 
 .checkbox:checked ~ .checkbox-icon {
-    background-color: var(--pressed-state);
     border: 1.25px solid var(--pressed-state);
+
+    background-color: var(--pressed-state);
+    fill: var(--light);
+}
+
+.checkbox:focus:checked~.checkbox-icon {
+    border: 1.25px solid var(--pressed-state);
+
+    background-color: var(--pressed-state);
+    fill: var(--light);
 }
 
 .checkbox:focus ~ .checkbox-icon {
     border: 1.25px solid var(--pressed-state);
+
+    fill: transparent;
 }
 
 .checkbox:disabled ~.checkbox-icon {
     border: 1.25px solid var(--form-border);
+
+    fill: transparent;
 }
 
 .checkbox:checked:disabled ~.checkbox-icon {
-    background-color: var(--form-border);
     border: 1.25px solid var(--form-border);
+
+    background-color: var(--form-border);
+    fill: var(--light);
 }
 
 /*===================================================*/
@@ -449,7 +468,7 @@ header {
 }
 
 .legal-agreement .label-text {
-    margin-left: 24px;
+    margin-left: 8px;
 }
 
 .policy-link {
@@ -458,7 +477,7 @@ header {
 
 .modal-send {
     display: block;
-    width: 169px;
+    min-width: 169px;
     margin: auto;
     padding: 16px 32px;
 
@@ -837,6 +856,7 @@ padding: 96px 0px 120px 0px;
     outline: none;
 
     background-color: var(--primary-dark);
+    color: var(--light);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     transition: border var(--main-transition-dur-and-func);
 }
